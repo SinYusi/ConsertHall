@@ -1,0 +1,59 @@
+package 콘서트예약;
+import java.util.Scanner;
+class Line{
+	private Seat[]Sseat;
+	private Seat[]Aseat;
+	private Seat[]Bseat;
+	private Scanner sc;
+	void Line() {
+		Sseat=new Seat[10];
+		Aseat=new Seat[10];
+		Bseat=new Seat[10];
+		sc=new Scanner(System.in);
+	}
+	
+	void InitialName() {
+		for(int i=0;i<10;i++)Sseat[i]=new Seat("---");
+		for(int i=0;i<10;i++)Aseat[i]=new Seat("---");
+		for(int i=0;i<10;i++)Bseat[i]=new Seat("---");
+	}
+	
+	void SseatRun() {
+		System.out.print("S>> ");
+		for(int i=0;i<10;i++) {
+			System.out.print(Sseat[i].getName());
+		}
+		System.out.print("\n이름>> ");
+		String name=sc.nextLine();
+		System.out.print("번호>> ");
+		int number=sc.nextInt();
+		
+		Sseat[number]=new Seat(name);
+	}
+	
+	void AseatRun() {
+		System.out.print("A>> ");
+		for(int i=0;i<10;i++) {
+			System.out.print(Aseat[i].getName());
+		}
+		System.out.print("\n이름>> ");
+		String name=sc.nextLine();
+		System.out.print("번호>> ");
+		int number=sc.nextInt();
+		
+		Aseat[number]=new Seat(name);
+	}
+	
+	void BseatRun() {
+		System.out.print("B>> ");
+		for(int i=0;i<10;i++) {
+			System.out.print(Bseat[i].getName());
+		}
+		System.out.print("\n이름>> ");
+		String name=sc.nextLine();
+		System.out.print("번호>> ");
+		int number=sc.nextInt();
+		
+		Bseat[number]=new Seat(name);
+	}
+}

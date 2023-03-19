@@ -1,0 +1,20 @@
+package 콘서트예약;
+import java.util.Scanner;
+public class Reservation {
+	
+	public static void main(String[]args) {
+		new Line().InitialName();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("---------------------명품콘서트홀 예약 시스템---------------------");
+		while(true) {
+			System.out.print("예약:1, 조회:2, 취소:3, 끝내기:4 >> ");
+			int user=sc.nextInt();
+			
+			if(user==1)new Concert().reservation();
+			else if(user==2)new Line().Lookup();
+			else if(user==3)new Line().Cancel();
+			else if(user==4)break;
+			else System.out.println("잘못 입력하셨습니다.");
+		}
+	}
+}
